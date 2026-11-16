@@ -1,0 +1,10 @@
+# ປ້ອງກັນບໍ່ໃຫ້ເປີດໄຟລ໌ SQL / bat / txt ຜ່ານເວັບ
+<FilesMatch "\.(sql|bat|txt|md)$">
+    Require all denied
+</FilesMatch>
+
+# ===== ບັງຄັບ HTTPS =====
+# ເອົາເຄື່ອງໝາຍ # ອອກ 3 ບັນທັດລຸ່ມນີ້ ຫຼັງຈາກຕັ້ງ HTTPS ສຳເລັດແລ້ວ (ເບິ່ງ README_PHASE2.txt)
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

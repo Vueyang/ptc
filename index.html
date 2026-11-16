@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ລະບົບຄຸ້ມຄອງຄະນະໂຄສະນາອົບຮົມສູນກາງພັກ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<section id="login" hidden>
+  <form id="loginForm" class="login-card">
+    <h1>ຄະນະໂຄສະນາອົບຮົມສູນກາງພັກ</h1>
+    <p class="muted">ລະບົບຄຸ້ມຄອງກົມ ແລະ ຈັດເກັບອຸປະກອນ</p>
+    <label>ຊື່ຜູ້ໃຊ້<input name="username" autocomplete="username" required></label>
+    <label>ລະຫັດຜ່ານ<input name="password" type="password" autocomplete="current-password" required></label>
+    <p class="err" id="loginErr"></p>
+    <button class="primary">ເຂົ້າລະບົບ</button>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <aside id="side">
+    <div class="brand">ຄະນະໂຄສະນາອົບຮົມ<br><small>ສູນກາງພັກ</small></div>
+    <nav id="nav">
+      <button data-view="dashboard">ພາບລວມ</button>
+      <button data-view="departments">ກົມ ແລະ ໜ່ວຍງານ</button>
+      <button data-view="employees">ພະນັກງານ</button>
+      <button data-view="assets">ອຸປະກອນ</button>
+      <button data-view="transactions">ມອບ / ໂອນ / ສ້ອມ</button>
+      <button data-view="categories">ປະເພດອຸປະກອນ</button>
+      <button data-view="stocktake">ກວດນັບອຸປະກອນ</button>
+      <button data-view="users" data-admin hidden>ຜູ້ໃຊ້ລະບົບ</button>
+      <button data-view="audit" data-admin hidden>ປະຫວັດການແກ້ໄຂ</button>
+      <button data-view="backups" data-admin hidden>ສຳຮອງຂໍ້ມູນ</button>
+    </nav>
+    <div class="who"><span id="whoName"></span><button id="chpw" class="ghost">ປ່ຽນລະຫັດຜ່ານ</button><button id="logout" class="ghost">ອອກຈາກລະບົບ</button></div>
+  </aside>
+  <main id="main"></main>
+</div>
+
+<dialog id="dlg"></dialog>
+<div id="toast" role="status"></div>
+<script src="assets/app.js"></script>
+<script src="assets/phase2.js"></script>
+</body>
+</html>
